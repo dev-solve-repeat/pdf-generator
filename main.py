@@ -3,6 +3,7 @@ import pandas as pd
 
 pdf = FPDF(orientation="P", unit="mm", format="A4")
 df = pd.read_csv("topics.csv")
+pdf.set_auto_page_break(auto=False, margin=0)
 
 for index, row in df.iterrows():
     pdf.add_page()
